@@ -1,0 +1,18 @@
+---
+import NavItems from './NavItems.astro'
+import NAVIGATION from '../data/itemNav.js'
+---
+
+<article class="flex justify-between items-center md:px-10 md:py-5">
+  <section class="w-20 h-auto">
+    <img src="/img/logo-ad.png" alt="Logo AD">
+  </section>
+
+  <section>
+    <ul class="flex items-center gap-10">
+      {NAVIGATION.map(item => (
+        <NavItems {...item} />
+      ))}
+    </ul>
+  </section>
+</article>

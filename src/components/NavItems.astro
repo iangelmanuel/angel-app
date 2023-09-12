@@ -1,0 +1,12 @@
+---
+interface Props {
+  name: string
+  path: string
+}
+
+const { name, path } = Astro.props
+---
+
+<li class="text-xl text-indigo-500 font-extrabold hover:text-white hover:scale-110">
+  <a href={path}>{name}</a>
+</li>
