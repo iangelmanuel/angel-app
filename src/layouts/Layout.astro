@@ -1,7 +1,8 @@
 ---
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
-import { ViewTransitions } from 'astro:transitions' 
+import { ViewTransitions } from 'astro:transitions'
+import 'react-toastify/dist/ReactToastify.css'
 
 interface Props {
 	title: string
@@ -19,7 +20,7 @@ const { title } = Astro.props
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<ViewTransitions />
 		<title>{title}</title>
@@ -29,7 +30,7 @@ const { title } = Astro.props
 			<Header />
 		</header>
 
-		<main class="mx-auto w-full md:w-5/6 lg:w-2/5 border border-zinc-900 mb-20">
+		<main class="mx-auto w-full md:w-5/6 lg:w-2/5 border border-zinc-900 mb-10 md:mb-20">
 			<slot />
 		</main>
 
@@ -45,12 +46,7 @@ const { title } = Astro.props
 		background-color: #00020d;
 		color: #fff;
 	}
-
 	body {
 		font-family: 'Open Sans', sans-serif;
-	}
-
-	.font-spacemono {
-		font-family: 'Space Mono', monospace;
 	}
 </style>

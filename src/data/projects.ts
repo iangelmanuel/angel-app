@@ -3,30 +3,30 @@ import type { IProject } from '../types/main.d.ts'
 export const projects: IProject[] = [
   {
     title: 'iBlue Wave',
-    date: 'Septiembre, 10, 2023',
-    description: 'Esta aplicación web permite a los usuarios crear y compartir recetas relacionadas con las fresas.',
+    date: 'Sept 10, 2023',
+    description: 'Tienda de articulos de buceos, ofreciendo los mejores precios y con los mejores profesionales que te darán instrucciones.',
     technologies: [
-      { name: 'Next 13', image: 'nextjs' },
-      { name: 'Next Auth', image: 'nextauth' },
-      { name: 'TypeScript', image: 'typescript' },
-      { name: 'Tailwindcss', image: 'tailwindcss' }
+      { name: 'Next 13' },
+      { name: 'Next Auth' },
+      { name: 'TypeScript' },
+      { name: 'Tailwindcss' }
     ],
-    github: 'https://github.com/iAngelManuel/fresquilla-app',
-    demo: 'https://fresquilla.vercel.app',
+    github: 'https://github.com/iAngelManuel/ibluewave',
+    demo: 'https://ibluewave.vercel.app',
     image: '/img/ibluewave-project.png'
   },
   {
     title: 'Fresquilla',
-    date: 'Agosto, 23, 2023',
-    description: 'Esta aplicación web permite a los usuarios crear y compartir recetas relacionadas con las fresas.',
+    date: 'Ago 23, 2023',
+    description: 'Es un excelente emprendimiento donde encontraras las fresas con la mejor calidad y precio en Colombia.',
     technologies: [
-      { name: 'Node JS', image: 'nodejs' },
-      { name: 'Express', image: 'express' },
-      { name: 'MongoDB', image: 'mongodb' },
-      { name: 'Vite', image: 'vite' },
-      { name: 'React', image: 'react' },
-      { name: 'TypeScript', image: 'typescript' },
-      { name: 'Tailwindcss', image: 'tailwindcss' }
+      { name: 'Node JS' },
+      { name: 'Express' },
+      { name: 'MongoDB' },
+      { name: 'Vite' },
+      { name: 'React' },
+      { name: 'TypeScript' },
+      { name: 'Tailwindcss' }
     ],
     github: 'https://github.com/iAngelManuel/fresquilla-app',
     demo: 'https://fresquilla.vercel.app',

@@ -1,16 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Post from '../components/Post.astro'
-import type { string } from 'astro/zod';
+import PostAbout from '../components/PostAbout.astro'
+import PostTechnologys from '../components/PostTechnologys.astro'
 ---
 
 <Layout title="AD | Angel De La Torre">
-  <Post
+  <PostAbout
     avatar="/img/user.JPG"
     user="Angel De La Torre"
     username="@iangelmanuel"
     date="Sept 13, 2023"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet sodales aliquam, nunc nisl ultricies nunc, nec aliquam nisl nisl nec nisl. Sed euismod, diam sit amet sodales aliquam, nunc nisl ultricies nunc, nec aliquam nisl nisl nec nisl."
+  >
+    <div class="w-full text-[14px] mt-1">
+      <h6 class="text-sm text-sky-500 font-bold mb-1">Bienvenido a mi portafolio web</h6>
+      <p>
+        Mi enfoque principal en el mundo del desarrollo web es brindar soluciones creativas y funcionales a través de tecnologías de vanguardia.
+      </p>
+    </div>
+
+    <div class="w-full text-[14px] mt-4">
+      <h5 class="text-sm text-sky-500 font-bold mb-1">¿Qué puedo hacer por ti?</h5>
+      <p>
+        Puedo ayudarte a crear tu sitio web, ya sea un blog, una tienda en línea, un sitio web para tu negocio o cualquier otra cosa que se te ocurra.
+      </p>
+    </div>
+  </PostAbout>
+
+  <PostAbout
+    avatar="/img/user.JPG"
+    user="Angel De La Torre"
+    username="@iangelmanuel"
+    date="Sept 13, 2023"
     image="/img/about.jpg"
-  />
+  >
+    <PostTechnologys />
+  </PostAbout>
 </Layout>

@@ -1,0 +1,51 @@
+---
+import HeaderNotFound from '../components/HeaderNotFound.astro'
+import Footer from '../components/Footer.astro'
+import { ViewTransitions } from 'astro:transitions' 
+
+interface Props {
+	title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen selection:bg-sky-950">
+		<header class="mx-auto w-full md:w-5/6 lg:w-2/5 border border-zinc-900 mt-20">
+			<HeaderNotFound />
+		</header>
+
+		<main class="mx-auto w-full md:w-5/6 lg:w-2/5 border border-zinc-900 mb-10 md:mb-20">
+			<slot />
+		</main>
+
+		<footer>
+			<Footer />
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	html {
+		line-height: 1.5;
+		background-color: #00020d;
+		color: #fff;
+	}
+	body {
+		font-family: 'Open Sans', sans-serif;
+	}
+</style>

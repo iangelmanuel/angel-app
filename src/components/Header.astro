@@ -1,11 +1,16 @@
 ---
+import IconBar from './IconBar.astro'
 import NavItems from './NavItems.astro'
 import NAVIGATION from '../data/itemNav.js'
 import HeaderSvg from './HeaderSvg.astro'
-import VerifySvg from './VerifySvg.astro';
+import VerifySvg from './VerifySvg.astro'
 ---
 
 <article class="w-full">
+  <section class="w-full flex justify-between lg:justify-evenly items-center fixed top-0 left-0 py-2 px-3 md:px-0 bg-[#00020d] border-b-2 border-zinc-900 z-10">
+    <IconBar />
+  </section>
+
   <section class="w-full">
     <div>
       <img
@@ -29,7 +34,7 @@ import VerifySvg from './VerifySvg.astro';
           <h2 class="text-2xl font-bold">Angel De La Torre</h2>
           <VerifySvg />
         </div>
-        <small class="text-zinc-600 text-sm">
+        <small class="text-zinc-500 text-sm">
           <a
             href="https://twitter.com/iangelmanuel"
             target="_blank"
@@ -41,7 +46,7 @@ import VerifySvg from './VerifySvg.astro';
 
       <section class="flex items-start md:mr-10">
         <a
-          href="#"
+          href="linkedin.com/in/angel-manuel-de-la-torre-montaño-67485923b"
           target="_blank"
           rel="noopener noreferrer"
           class="
@@ -59,7 +64,7 @@ import VerifySvg from './VerifySvg.astro';
       </p>
     </div>
 
-    <div class="relative -top-3 left-5">
+    <div class="relative -top-3 left-5 text-zinc-400">
       <HeaderSvg />
     </div>
 

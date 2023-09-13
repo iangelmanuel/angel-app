@@ -1,0 +1,36 @@
+---
+import IconBar from './IconBar.astro'
+---
+
+<article class="w-full">
+  <section class="w-full flex justify-between lg:justify-evenly items-center fixed top-0 left-0 py-2 bg-[#00020d] border-b-2 border-zinc-900 z-10">
+    <IconBar />
+  </section>
+
+  <section class="w-full">
+    <div class="bg-zinc-900 w-full h-[150px] md:h-[200px] object-cover object-center"></div>
+    <div class="relative -top-14 md:-top-16 left-2 md:left-5">
+      <img
+        src="./img/user-unknown.png"
+        alt="user unknown"
+        class="w-24 h-24 md:w-32 md:h-32 aspect-[3/1] rounded-full object-cover bg-surface-4"
+      >
+    </div>
+
+    <div class="flex justify-between relative -top-10 left-5">
+      <section>
+        <div class="flex gap-1 items-center">
+          <h2 class="text-2xl font-bold">Unknown</h2>
+        </div>
+        <small class="text-zinc-500 text-sm">
+          <a
+            href="https://twitter.com/iangelmanuel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+          >@unknown</a>
+        </small>
+      </section>
+    </div>
+  </section>
+</article>

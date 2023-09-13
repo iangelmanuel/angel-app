@@ -1,25 +1,25 @@
 ---
 import VerifySvg from './VerifySvg.astro'
+import PostButtons from './PostButtons.astro'
 
 interface Props {
   avatar: string
   user: string
   username: string
   date: string
-  description: string
-  image: string
+  image?: string
 }
 
-const { avatar, user, username, date, description, image } = Astro.props
+const { avatar, user, username, date, image = '' } = Astro.props
 ---
 
-<article class="flex items-center">
-  <section class="flex items-start md:items-center px-5 my-5">
-    <div class="w-full md:w-40">
+<article class="flex items-center border-t border-zinc-800">
+  <section class="flex px-5 my-5">
+    <div class="mr-5">
       <img
         src={avatar}
         alt={`foto de perfil de ${username}`}
-        class="w-12 h-12 aspect-[3/1] rounded-full object-cover bg-surface-4"
+        class="w-12 h-12 rounded-full object-cover"
       />
     </div>
 
@@ -31,17 +31,25 @@ const { avatar, user, username, date, description, image } = Astro.props
         <small class="text-zinc-500">{username} · {date}</small>
       </section>
 
-      <section class="mt-1 md:mt-0.5">
-        <p class="w-full text-[12px]">{description}</p>
+      <section class="mt-1 md:mt-0.5 w-[270px] md:w-[500px] lg:w-[450px]">
+        <slot />
       </section>
     </div>
   </section>
 </article>
 
 <article class="w-1/2 mx-auto pb-3">
+  {image && (
     <img
       src={image}
       alt={`foto de ${username}`}
-      class="w-full h-96 object-cover bg-surface-4"
+      class="w-full h-full rounded-lg object-cover"
     />
+  )}
+</article>
+
+<article>
+  <section class="flex justify-evenly items-center my-3">
+    <PostButtons />
+  </section>
 </article>

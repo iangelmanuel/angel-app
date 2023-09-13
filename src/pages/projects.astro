@@ -1,7 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import PostProjects from '../components/PostProjects.astro'
+import { projects } from '../data/projects.js'
 ---
 
 <Layout title="AD | Proyectos">
-
+  {projects.map(project => (
+    <PostProjects {project} />
+  ))}
 </Layout>

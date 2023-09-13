@@ -15,5 +15,4 @@ export interface IProject {
 
 export interface Technology {
   name: string
-  image: string
 }

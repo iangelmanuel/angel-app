@@ -1,0 +1,85 @@
+---
+import type { IProject } from '../types/main'
+import VerifySvg from './VerifySvg.astro'
+import PostButtons from './PostButtons.astro'
+
+interface Props {
+  project: IProject
+}
+
+const { project } = Astro.props
+const { title, date, description, technologies, github, demo, image } = project
+---
+
+<article class="flex items-center border-t border-zinc-800">
+  <section class="flex px-5 my-5">
+    <div class="mr-5">
+      <img
+        src="/img/user.JPG"
+        alt="foto de usuario @iangelmanuel"
+        class="w-12 h-12 rounded-full object-cover"
+      />
+    </div>
+
+    <div class="md:flex md:flex-col">
+      <section class="flex flex-col md:flex-row md:gap-1 justify-center md:justify-start md:items-center">
+        <h5 class="flex gap-x-0.5 font-bold">
+          Angel De La Torre <VerifySvg />
+        </h5>
+        <small class="text-zinc-500">@iangelmanuel · {date}</small>
+      </section>
+
+      <section class="text-sm mt-1 md:mt-0.5 w-[270px] md:w-[500px] lg:w-[450px] text-[14px]">
+        <div class="mt-1">
+          <h6 class="text-lg text-sky-500 font-bold mb-1">{title}</h6>
+          <p>{description}</p>
+        </div>
+
+        <div class="flex flex-col mt-4">
+          <h6 class="text-sm text-sky-500 font-bold mb-1">Tecnologías:</h6>
+          {technologies.map(tech => (
+            <span class="text-sm">🔹{tech.name}</span>
+          ))}
+        </div>
+      </section>
+
+      <section class="flex flex-col text-sm mt-5">
+        <div>
+          <span class="font-bold">Demo: </span>
+          <a
+            href={demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sky-500 hover:underline"
+          >{demo}</a>
+        </div>
+
+        <div>
+          <span class="font-bold">Github: </span>
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-sky-500 hover:underline"
+          >{github}</a>
+        </div>
+      </section>
+    </div>
+  </section>
+</article>
+
+<article class="w-1/2 mx-auto pb-3">
+  {image && (
+    <img
+      src={image}
+      alt="imagen del proyecto"
+      class="w-full h-full rounded-lg object-cover"
+    />
+  )}
+</article>
+
+<article>
+  <section class="flex justify-evenly items-center my-3">
+    <PostButtons />
+  </section>
+</article>
