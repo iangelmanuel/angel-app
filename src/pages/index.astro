@@ -1,7 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
+import Post from '../components/Post.astro'
+import type { string } from 'astro/zod';
 ---
 
-<Layout title="Welcome to Astro.">
-
+<Layout title="AD | Angel De La Torre">
+  <Post
+    avatar="/img/user.JPG"
+    user="Angel De La Torre"
+    username="@iangelmanuel"
+    date="Sept 13, 2023"
+    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, diam sit amet sodales aliquam, nunc nisl ultricies nunc, nec aliquam nisl nisl nec nisl. Sed euismod, diam sit amet sodales aliquam, nunc nisl ultricies nunc, nec aliquam nisl nisl nec nisl."
+    image="/img/about.jpg"
+  />
 </Layout>

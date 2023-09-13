@@ -5,8 +5,18 @@ interface Props {
 }
 
 const { name, path } = Astro.props
+const actuallyPath = Astro.url.pathname
+const isTheSamePath = actuallyPath === path
 ---
 
-<li class="text-xl text-indigo-500 font-extrabold hover:text-white hover:scale-110">
-  <a href={path}>{name}</a>
-</li>
+<ul>
+  <a href={path} class:list={[
+    "font-bold",
+    {
+      "border-b-4 border-sky-500": isTheSamePath,
+      "text-gray-500": !isTheSamePath
+    }
+  ]}>
+    {name}
+  </a>
+</ul>

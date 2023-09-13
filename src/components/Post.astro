@@ -1,0 +1,47 @@
+---
+import VerifySvg from './VerifySvg.astro'
+
+interface Props {
+  avatar: string
+  user: string
+  username: string
+  date: string
+  description: string
+  image: string
+}
+
+const { avatar, user, username, date, description, image } = Astro.props
+---
+
+<article class="flex items-center">
+  <section class="flex items-start md:items-center px-5 my-5">
+    <div class="w-full md:w-40">
+      <img
+        src={avatar}
+        alt={`foto de perfil de ${username}`}
+        class="w-12 h-12 aspect-[3/1] rounded-full object-cover bg-surface-4"
+      />
+    </div>
+
+    <div class="md:flex md:flex-col">
+      <section class="flex flex-col md:flex-row md:gap-1 justify-center md:justify-start md:items-center">
+        <h5 class="flex gap-x-0.5 font-bold">
+          {user} <VerifySvg />
+        </h5>
+        <small class="text-zinc-500">{username} · {date}</small>
+      </section>
+
+      <section class="mt-1 md:mt-0.5">
+        <p class="w-full text-[12px]">{description}</p>
+      </section>
+    </div>
+  </section>
+</article>
+
+<article class="w-1/2 mx-auto pb-3">
+    <img
+      src={image}
+      alt={`foto de ${username}`}
+      class="w-full h-96 object-cover bg-surface-4"
+    />
+</article>

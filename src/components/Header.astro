@@ -1,18 +1,74 @@
 ---
 import NavItems from './NavItems.astro'
 import NAVIGATION from '../data/itemNav.js'
+import HeaderSvg from './HeaderSvg.astro'
+import VerifySvg from './VerifySvg.astro';
 ---
 
-<article class="flex justify-between items-center md:px-10 md:py-5">
-  <section class="w-20 h-auto">
-    <img src="/img/logo-ad.png" alt="Logo AD">
-  </section>
+<article class="w-full">
+  <section class="w-full">
+    <div>
+      <img
+        src="/img/hero.jpeg"
+        alt="hero image"
+        class="w-full h-[150px] md:h-[200px] object-cover object-center"
+      />
+    </div>
 
-  <section>
-    <ul class="flex items-center gap-10">
-      {NAVIGATION.map(item => (
-        <NavItems {...item} />
-      ))}
-    </ul>
+    <div class="relative -top-14 md:-top-16 left-2 md:left-5">
+      <img
+        src="./img/user.JPG"
+        alt="user iangelmanuel"
+        class="w-24 h-24 md:w-32 md:h-32 aspect-[3/1] rounded-full object-cover bg-surface-4"
+      >
+    </div>
+
+    <div class="flex justify-between relative -top-10 left-5">
+      <section>
+        <div class="flex gap-1 items-center">
+          <h2 class="text-2xl font-bold">Angel De La Torre</h2>
+          <VerifySvg />
+        </div>
+        <small class="text-zinc-600 text-sm">
+          <a
+            href="https://twitter.com/iangelmanuel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+          >@iangelmanuel</a>
+        </small>
+      </section>
+
+      <section class="flex items-start md:mr-10">
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="
+            text-sm text-zinc-200 border border-zinc-200 hover:border-none hover:bg-sky-500 hover:text-white px-4 py-2 rounded-full
+          "
+        >
+          LinkedIn
+        </a>
+      </section>
+    </div>
+
+    <div class="w-[300px] md:w-[400px] relative -top-7 left-5">
+      <p class="text-zinc-400 text-sm">
+        Apasionado desarrollador con objetivo de crear experiencias web excepcionales que combinen diseño atractivo con funcionalidad sólida. Con un enfoque en la innovación y la resolución de problemas, estoy constantemente buscando formas de mejorar y perfeccionar mis habilidades.
+      </p>
+    </div>
+
+    <div class="relative -top-3 left-5">
+      <HeaderSvg />
+    </div>
+
+    <div class="relative mt-2 pb-3">
+      <li class="flex justify-evenly">
+        {NAVIGATION.map((item) => (
+          <NavItems {...item} />
+        ))}
+      </li>
+    </div>
   </section>
 </article>
