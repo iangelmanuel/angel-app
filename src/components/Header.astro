@@ -7,7 +7,7 @@ import VerifySvg from './VerifySvg.astro'
 ---
 
 <article class="w-full">
-  <section class="w-full flex justify-between lg:justify-evenly items-center fixed top-0 left-0 py-2 px-3 md:px-0 bg-[#00020d] border-b-2 border-zinc-900 z-10">
+  <section class="w-full flex justify-start items-center fixed top-0 left-0 py-2 px-3 md:px-20 bg-[#00020d] border-b-2 border-zinc-900 z-10">
     <IconBar />
   </section>
 
@@ -71,7 +71,7 @@ import VerifySvg from './VerifySvg.astro'
     <div class="relative mt-2 pb-3">
       <li class="flex justify-evenly">
         {NAVIGATION.map((item) => (
-          <NavItems {...item} />
+          <NavItems {...item} client:visible />
         ))}
       </li>
     </div>
