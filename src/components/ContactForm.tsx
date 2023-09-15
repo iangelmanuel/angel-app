@@ -21,7 +21,14 @@ export default function ContactForm () {
   })
 
   return (
-    <section className="px-5 py-3">
+    <section className="flex gap-5 justify-center px-5 py-3">
+      <div className="mt-1.5">
+        <img
+          src="/img/user-unknown.png"
+          alt="logo de usuario desconocido"
+          className="w-10 h-10 object-cover rounded-full"
+        />
+      </div>
       <form onSubmit={onSubmit} className="space-y-2">
         <div>
           <label htmlFor="name" className="placeholder:text-zinc-800 text-sm font-bold ml-1.5">Nombre</label>
@@ -67,10 +74,10 @@ export default function ContactForm () {
           ></textarea>
           {(errors.message !== null) && <span className="text-sm text-red-500">{errors.message?.message as string}</span>}
         </div>
-        <div className="mt-1">
+        <div className="flex justify-end mt-1">
           <input
             type="submit"
-            className="w-full bg-sky-500 text-white font-bold rounded-xl p-2 mt-1 cursor-pointer hover:bg-sky-600 transition-all"
+            className="text-sm text-zinc-200 border border-zinc-200 transition-all hover:border-sky-500 hover:bg-sky-500 hover:text-white px-4 py-2 rounded-full"
           />
         </div>
       </form>

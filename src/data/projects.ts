@@ -6,9 +6,11 @@ export const projects: IProject[] = [
     date: 'Sept 10, 2023',
     description: 'Tienda de articulos de buceos, ofreciendo los mejores precios y con los mejores profesionales que te darán instrucciones.',
     technologies: [
-      { name: 'Next 13' },
+      { name: 'MongoDB' },
+      { name: 'Next JS' },
       { name: 'Next Auth' },
       { name: 'TypeScript' },
+      { name: 'NextUI' },
       { name: 'Tailwindcss' }
     ],
     github: 'https://github.com/iAngelManuel/ibluewave',

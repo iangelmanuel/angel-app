@@ -9,7 +9,7 @@ export default function NavItems() {
           }`
         }
       >
-        <a href="/" className="font-bold">
+        <a href="/" className="font-bold hover:text-white">
           Sobre mi
         </a>
       </li>
@@ -22,7 +22,7 @@ export default function NavItems() {
           }`
         }
       >
-        <a href="/projects" className="font-bold">
+        <a href="/projects" className="font-bold hover:text-white">
           Proyectos
         </a>
       </li>
@@ -36,7 +36,7 @@ export default function NavItems() {
           }`
         }
       >
-        <a href="/contact" className="font-bold">
+        <a href="/contact" className="font-bold hover:text-white">
           Contacto
         </a>
       </li>
