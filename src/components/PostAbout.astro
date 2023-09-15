@@ -28,7 +28,14 @@ const { avatar, user, username, date, image = '' } = Astro.props
         <h5 class="flex gap-x-0.5 font-bold">
           {user} <VerifySvg />
         </h5>
-        <small class="text-zinc-500">{username} · {date}</small>
+        <small class="text-zinc-500">
+          <a
+            href="https://twitter.com/iangelmanuel"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+          >{username}</a> · {date}
+        </small>
       </section>
 
       <section class="mt-1 md:mt-0.5 w-[270px] md:w-[500px] lg:w-[450px]">

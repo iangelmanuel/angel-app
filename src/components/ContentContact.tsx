@@ -39,7 +39,14 @@ export default function ContentContact () {
                   />
                 </svg>
               </h5>
-              <small className="text-zinc-500">@iangelmanuel · Sept 13, 2023</small>
+              <small className="text-zinc-500">
+                <a
+                  href="https://twitter.com/iangelmanuel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >@iangelmanuel</a> · Sept 13, 2023
+              </small>
             </section>
             <section className="text-sm mt-1 md:mt-0.5 w-[270px] md:w-[500px] lg:w-[450px] text-[14px]">
               <div className="mt-1">
