@@ -2,13 +2,14 @@
 import FooterIcons from './FooterIcons.astro'
 ---
 
-<footer class="w-full flex flex-col md:flex-row gap-10 md:gap-60 border-t-2 bg-[#00020d] border-zinc-900 p-5 relative bottom-0 left-0">
-  <article class="mx-auto flex gap-5">
-    <FooterIcons />
+<footer class="relative bottom-0 left-0">
+  <article class="w-full flex border-t-2 bg-[#00020d] border-zinc-900 p-5">
+    <section class="mx-auto flex gap-10">
+      <FooterIcons />
+    </section>
   </article>
-</footer>
-
-<footer
-  class="flex flex-col lg:flex-row gap-14 lg:gap-20 lg:justify-center lg:items-start border-t-2 border-b-2 bg-[#00020d] border-zinc-900 p-2 relative bottom-0 left-0">
-  <p class="text-sm text-center text-sky-500 font-bold ">Angel De La Torre {new Date().getFullYear()} &copy;</p>
+  
+  <article class="flex justify-center border-t-2 border-b-2 bg-[#00020d] border-zinc-900 p-2">
+    <p class="text-base text-center text-sky-500 font-bold ">Angel De La Torre {new Date().getFullYear()} &copy;</p>
+  </article>
 </footer>
