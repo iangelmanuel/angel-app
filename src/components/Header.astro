@@ -1,7 +1,6 @@
 ---
 import IconBar from './IconBar.astro'
-import NavItems from './NavItems.astro'
-import NAVIGATION from '../data/itemNav.js'
+import NavItems from './NavItems'
 import HeaderSvg from './HeaderSvg.astro'
 import VerifySvg from './VerifySvg.astro'
 ---
@@ -69,11 +68,9 @@ import VerifySvg from './VerifySvg.astro'
     </div>
 
     <div class="relative mt-2 pb-3">
-      <li class="flex justify-evenly">
-        {NAVIGATION.map((item) => (
-          <NavItems {...item} />
-        ))}
-      </li>
+      <ul class="flex justify-evenly">
+        <NavItems client:only />
+      </ul>
     </div>
   </section>
 </article>
