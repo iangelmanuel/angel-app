@@ -9,7 +9,7 @@ export interface IProject {
   description: string
   technologies: Technology[]
   github: `https://github.com/iAngelManuel/${string}`
-  demo: `https://${string}.vercel.app`
+  demo: string
   image: string
 }
 

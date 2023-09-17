@@ -14,7 +14,7 @@ export const projects: IProject[] = [
       { name: 'Tailwindcss' }
     ],
     github: 'https://github.com/iAngelManuel/ibluewave',
-    demo: 'https://ibluewave.vercel.app',
+    demo: 'https://www.ibluewavetechnology.com',
     image: '/img/ibluewave-project.png'
   },
   {
