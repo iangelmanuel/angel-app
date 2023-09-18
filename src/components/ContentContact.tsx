@@ -47,7 +47,7 @@ export default function ContentContact () {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline"
-                >@iangelmanuel</a> · Sept 13, 2023
+                >@iangelmanuel</a> · sept 13, 2023
               </small>
             </section>
             <section className="text-sm mt-1 md:mt-0.5 w-[270px] md:w-[500px] lg:w-[450px] text-[14px]">

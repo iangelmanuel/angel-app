@@ -3,7 +3,7 @@ import type { IProject } from '../types/main.d.ts'
 export const projects: IProject[] = [
   {
     title: 'iBlue Wave',
-    date: 'Sept 10, 2023',
+    date: 'sept 10, 2023',
     description: 'Tienda de articulos de buceos, ofreciendo los mejores precios y con los mejores profesionales que te darán instrucciones.',
     technologies: [
       { name: 'MongoDB' },
@@ -19,7 +19,7 @@ export const projects: IProject[] = [
   },
   {
     title: 'Fresquilla',
-    date: 'Ago 23, 2023',
+    date: 'ago 23, 2023',
     description: 'Es un excelente emprendimiento donde encontraras las fresas con la mejor calidad y precio en Colombia.',
     technologies: [
       { name: 'Node JS' },
