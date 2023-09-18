@@ -59,7 +59,8 @@ export default function ContentContact () {
           </div>
         </section>
       </article>
-      <article className="flex justify-evenly items-center my-3 pb-3">
+
+      <article className={`${isClicked ? 'border-b-2 border-zinc-900' : ''} flex justify-evenly items-center my-3 pb-3`}>
         <ContactButtons
           isClicked={isClicked}
           handleClick={handleClick}
