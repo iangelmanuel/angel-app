@@ -6,7 +6,7 @@ import VerifySvg from './VerifySvg.astro'
 ---
 
 <article class="w-full">
-  <section class="w-full flex justify-start items-center fixed top-0 left-0 py-2 px-3 md:px-20 bg-[#00020d] border-b-2 border-zinc-900 z-10">
+  <section class="w-full flex justify-start items-center fixed top-0 left-0 bg-[#00020d] py-2 px-3 md:px-20 z-10">
     <IconBar />
   </section>
 
@@ -19,7 +19,7 @@ import VerifySvg from './VerifySvg.astro'
       />
     </div>
 
-    <div id="#top" class="relative -top-14 md:-top-16 left-2 md:left-5">
+    <div class="relative -top-14 md:-top-16 left-2 md:left-5">
       <img
         src="./img/user.JPG"
         alt="user iangelmanuel"
@@ -33,7 +33,7 @@ import VerifySvg from './VerifySvg.astro'
           <h2 class="text-2xl font-bold">Angel De La Torre</h2>
           <VerifySvg />
         </div>
-        <small class="text-zinc-500 text-sm">
+        <small class="text-zinc-400 text-sm">
           <a
             href="https://twitter.com/iangelmanuel"
             target="_blank"
@@ -48,16 +48,16 @@ import VerifySvg from './VerifySvg.astro'
           href="https://www.linkedin.com/in/angel-manuel-de-la-torre-monta%C3%B1o-67485923b/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-sm text-zinc-200 border border-zinc-200 transition-all hover:border-sky-500 hover:bg-sky-500 hover:text-white px-4 py-2 rounded-full"
+          class="text-sm font-bold border-2 text-sky-500 border-sky-600 hover:bg-sky-600 hover:text-white px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
         >
           LinkedIn
         </a>
       </section>
     </div>
 
-    <div class="w-[300px] md:w-[400px] relative -top-7 left-5">
-      <p class="text-zinc-400 text-sm">
-        Apasionado desarrollador con objetivo de crear experiencias web excepcionales que combinen diseño atractivo con funcionalidad sólida. Con un enfoque en la innovación y la resolución de problemas, estoy constantemente buscando formas de mejorar y perfeccionar mis habilidades.
+    <div class="w-[300px] md:w-[400px] lg:w-[500px] relative -top-7 left-5">
+      <p class="text-sm">
+        Apasionado desarrollador con objetivo de crear experiencias web excepcionales que combinen diseño atractivo con funcionalidad sólida.
       </p>
     </div>
 
@@ -65,7 +65,7 @@ import VerifySvg from './VerifySvg.astro'
       <HeaderSvg />
     </div>
 
-    <div class="relative mt-2 pb-3">
+    <div class="relative mt-6 pb-3">
       <ul class="flex justify-evenly">
         <NavItems client:only />
       </ul>

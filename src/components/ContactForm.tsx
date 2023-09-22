@@ -38,7 +38,7 @@ export default function ContactForm () {
             id="name"
             placeholder="Ej. Angel De La Torre"
             {...register('name', nameValidation)}
-            className="w-full bg-[#00020d] border border-zinc-800 rounded-xl p-2 mt-1"
+            className="w-full bg-[#00020d] border border-zinc-800 rounded-full p-2 mt-1"
           />
           {(errors.name !== null) && <span className="text-sm text-red-500">{errors.name?.message as string}</span>}
         </div>
@@ -50,7 +50,7 @@ export default function ContactForm () {
             id="email"
             placeholder="Ej. email@email.com"
             {...register('email', emailValidation)}
-            className="w-full bg-[#00020d] border border-zinc-800 rounded-xl p-2 mt-1"
+            className="w-full bg-[#00020d] border border-zinc-800 rounded-full p-2 mt-1"
           />
           {(errors.email !== null) && <span className="text-sm text-red-500">{errors.email?.message as string}</span>}
         </div>
@@ -62,7 +62,7 @@ export default function ContactForm () {
             id="phone"
             placeholder="Ej. 0414-1234567"
             {...register('phone', phoneValidation)}
-            className="w-full bg-[#00020d] border border-zinc-800 rounded-xl p-2 mt-1"
+            className="w-full bg-[#00020d] border border-zinc-800 rounded-full p-2 mt-1"
           />
           {(errors.phone !== null) && <span className="text-sm text-red-500">{errors.phone?.message as string}</span>}
         </div>
@@ -74,7 +74,7 @@ export default function ContactForm () {
             rows={5}
             placeholder="Ej. Hola, me gustaría contactarme contigo..."
             {...register('message', messageValidation)}
-            className="w-full bg-[#00020d] border border-zinc-800 rounded-xl p-2 mt-1"
+            className="w-full bg-[#00020d] border border-zinc-800 rounded-2xl p-2 mt-1"
           ></textarea>
           {(errors.message !== null) && <span className="text-sm text-red-500">{errors.message?.message as string}</span>}
         </div>
@@ -82,7 +82,7 @@ export default function ContactForm () {
         <div className="flex justify-end mt-1">
           <input
             type="submit"
-            className="text-sm text-zinc-200 border border-zinc-200 transition-all hover:border-sky-500 hover:bg-sky-500 hover:text-white px-4 py-2 rounded-full"
+            className="text-sm font-bold border-2 text-sky-500 border-sky-600 hover:bg-sky-600 hover:text-white px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
           />
         </div>
       </form>

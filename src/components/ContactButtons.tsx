@@ -29,7 +29,7 @@ export default function ContactButtons ({ isClicked, handleClick }: ContactButto
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth="1.5"
-          stroke="currentColor"
+          stroke="#71717a"
           className="w-5 h-5"
         >
           <path
@@ -45,7 +45,7 @@ export default function ContactButtons ({ isClicked, handleClick }: ContactButto
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth="1.5"
-          stroke="currentColor"
+          stroke="#71717a"
           className="w-5 h-5"
         >
           <path
@@ -61,7 +61,7 @@ export default function ContactButtons ({ isClicked, handleClick }: ContactButto
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth="1.5"
-          stroke="currentColor"
+          stroke="#71717a"
           className="w-5 h-5"
         >
           <path

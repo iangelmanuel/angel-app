@@ -12,7 +12,7 @@ export default function ContentContact () {
 
   return (
     <>
-      <article className="flex items-center border-t border-zinc-900">
+      <article className="flex items-center">
         <section className="flex px-5 my-5">
           <div className="mr-5">
             <img
@@ -60,7 +60,7 @@ export default function ContentContact () {
         </section>
       </article>
 
-      <article className={`${isClicked ? 'border-b-2 border-zinc-900' : ''} flex justify-evenly items-center my-3 pb-3`}>
+      <article className="flex justify-evenly items-center my-3 pb-3">
         <ContactButtons
           isClicked={isClicked}
           handleClick={handleClick}
