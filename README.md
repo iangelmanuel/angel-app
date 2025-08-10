@@ -1,54 +1,97 @@
-# Astro Starter Kit: Basics
+# Angel De La Torre - Portfolio & Blog (Astro + React)
+
+Proyecto del portafolio personal de **Angel De La Torre** que evolucionará a un pequeño blog técnico y personal. Construido con **Astro**, **React**, **TypeScript** y **Tailwind CSS**.
+
+## Características
+
+- Astro 5 + Islands Architecture
+- Componentes híbridos Astro/React
+- Tailwind CSS para estilos utilitarios
+- Formularios con `react-hook-form`
+- Validaciones simples en TypeScript
+- Datos tipados (`projects.ts` + interfaces)
+
+## Estructura del Proyecto
 
 ```
-npm create astro@latest -- --template basics
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.svg
+├── astro.config.mjs        # Configuración de Astro
+├── tailwind.config.cjs     # Configuración de Tailwind
+├── tsconfig.json           # Configuración de TypeScript
+├── public/                 # Imágenes y assets estáticos
 ├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
+│   ├── components/         # Componentes Astro y React
+│   ├── data/               # Datos estáticos (ej: proyectos)
+│   ├── layouts/            # Layouts base
+│   ├── pages/              # Rutas (Astro Pages)
+│   ├── types/              # Definiciones de tipos
+│   └── validate/           # Reglas de validación formulario
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Requisitos
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Node.js >= 18.17
+- pnpm (recomendado) o npm
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Instalación y uso
 
-## 🧞 Commands
+```bash
+pnpm install
+pnpm dev       # entorno desarrollo
+pnpm build     # build producción en /dist
+pnpm preview   # vista previa del build
+pnpm format    # formatear con Prettier
+```
 
-All commands are run from the root of the project, from a terminal:
+## Scripts
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- `dev`: Inicia el servidor de desarrollo.
+- `build`: Genera la versión optimizada.
+- `preview`: Sirve el build generado.
+- `format`: Aplica Prettier a todo el proyecto.
 
-## 👀 Want to learn more?
+## Estilo de Código
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Prettier + plugins (`prettier-plugin-astro`, `prettier-plugin-tailwindcss`). Ejecuta `pnpm format` antes de abrir PR.
+
+## Roadmap (Evolución a Blog)
+
+1. Sistema de posts en Markdown (`/src/content/posts`).
+2. RSS feed.
+3. Paginación y etiquetas (tags).
+4. Soporte multilenguaje (ES/EN).
+5. Deploy automatizado (GitHub Actions + Pages / Vercel).
+6. Modo oscuro persistente.
+
+## Contribuciones
+
+Actualmente el proyecto es de uso personal. Pull Requests pueden ser discutidos primero abriendo un Issue.
+
+## Licencia
+
+Este proyecto usa una **Licencia de Uso Limitado Personal** (archivo `LICENSE`). No se permite:
+
+- Uso comercial sin permiso expreso.
+- Redistribución del código fuente modificada o no modificada.
+- Reventa como plantilla o producto.
+
+Se permite:
+
+- Fork para revisión personal / aprendizaje.
+- Inspiración para proyectos propios (sin copiar literal).
+
+Si deseas usar parte del código de forma pública o comercial, solicita autorización vía email: `iangelmanuel02@gmail.com`.
+
+## Autor
+
+**Angel DM (Angel De La Torre)**  
+Email: `iangelmanuel02@gmail.com`
+
+## Contacto y Redes (Agregar en futuro)
+
+- Blog: https://angel-delatorre.dev
+- GitHub: https://github.com/iAngelManuel
+
+---
+
+Hecho con pasión por el desarrollo web moderno 🚀
