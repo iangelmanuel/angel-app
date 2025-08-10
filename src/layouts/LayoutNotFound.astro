@@ -1,10 +1,11 @@
 ---
-import HeaderNotFound from '../components/HeaderNotFound.astro'
-import Footer from '../components/Footer.astro'
-import { ViewTransitions } from 'astro:transitions' 
+import { ClientRouter } from "astro:transitions"
+import HeaderNotFound from "../components/HeaderNotFound.astro"
+import Footer from "../components/Footer.astro"
+import "../styles/global.css"
 
 interface Props {
-	title: string
+  title: string
 }
 
 const { title } = Astro.props
@@ -12,40 +13,63 @@ const { title } = Astro.props
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Página no encontrada" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-		<ViewTransitions />
-		<title>{title}</title>
-	</head>
-	<body class="h-screen selection:bg-zinc-500">
-		<header class="mx-auto w-full md:w-5/6 lg:w-2/5 mt-20">
-			<HeaderNotFound />
-		</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Página no encontrada"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="generator"
+      content={Astro.generator}
+    />
+    <ClientRouter />
+    <title>{title}</title>
+  </head>
+  <body class="h-screen selection:bg-zinc-500">
+    <header class="mx-auto mt-20 w-full md:w-5/6 lg:w-2/5">
+      <HeaderNotFound />
+    </header>
 
-		<main class="mx-auto w-full md:w-5/6 lg:w-2/5 mb-10 md:mb-20">
-			<slot />
-		</main>
+    <main class="mx-auto mb-10 w-full md:mb-20 md:w-5/6 lg:w-2/5">
+      <slot />
+    </main>
 
-		<footer class="absolute w-full bottom-0">
-			<Footer />
-		</footer>
-	</body>
+    <footer class="absolute bottom-0 w-full">
+      <Footer />
+    </footer>
+  </body>
 </html>
 
 <style is:global>
-	html {
-		line-height: 1.5;
-		background-color: #00020d;
-		color: #fff;
-	}
-	body {
-		font-family: 'Open Sans', sans-serif;
-	}
+  html {
+    line-height: 1.5;
+    background-color: #00020d;
+    color: #fff;
+  }
+  body {
+    font-family: "Open Sans", sans-serif;
+  }
 </style>
