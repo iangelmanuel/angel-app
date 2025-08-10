@@ -1,0 +1,33 @@
+{
+  "arrowParens": "always",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "semi": false,
+  "experimentalTernaries": false,
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "quoteProps": "preserve",
+  "trailingComma": "none",
+  "singleAttributePerLine": true,
+  "htmlWhitespaceSensitivity": "css",
+  "vueIndentScriptAndStyle": false,
+  "proseWrap": "preserve",
+  "insertPragma": false,
+  "printWidth": 80,
+  "requirePragma": false,
+  "tabWidth": 2,
+  "useTabs": false,
+  "embeddedLanguageFormatting": "auto",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "importOrder": [
+    "^astro",
+    "^astro/(.*)$",
+    "^@/(.*)$",
+    "^@(.*)/types$",
+    "^[a-z]",
+    "^\\./",
+    "^.+\\.css$"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true
+}
