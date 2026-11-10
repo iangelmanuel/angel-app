@@ -1,37 +1,39 @@
-import type { IProject } from '../types/main.d.ts'
+import type { IProject } from "../types/main.d.ts"
 
 export const projects: IProject[] = [
   {
-    title: 'iBlue Wave',
-    date: 'sept 10, 2023',
-    description: 'Tienda de articulos de buceos, ofreciendo los mejores precios y con los mejores profesionales que te darán instrucciones.',
+    title: "iBlue Wave",
+    date: "sept 10, 2023",
+    description:
+      "Tienda de articulos de buceos, ofreciendo los mejores precios y con los mejores profesionales que te darán instrucciones.",
     technologies: [
-      { name: 'MongoDB' },
-      { name: 'Next JS' },
-      { name: 'Next Auth' },
-      { name: 'TypeScript' },
-      { name: 'NextUI' },
-      { name: 'Tailwindcss' }
+      { name: "MongoDB" },
+      { name: "Next JS" },
+      { name: "Next Auth" },
+      { name: "TypeScript" },
+      { name: "NextUI" },
+      { name: "Tailwindcss" }
     ],
-    github: 'https://github.com/iAngelManuel/ibluewave',
-    demo: 'https://www.ibluewavetechnology.com',
-    image: '/img/ibluewave-project.png'
+    github: "https://github.com/iAngelManuel/ibluewave",
+    demo: "https://www.ibluewavetechnology.com",
+    image: "/img/ibluewave-project.png"
   },
   {
-    title: 'Fresquilla',
-    date: 'ago 23, 2023',
-    description: 'Es un excelente emprendimiento donde encontraras las fresas con la mejor calidad y precio en Colombia.',
+    title: "Fresquilla",
+    date: "ago 23, 2023",
+    description:
+      "Es un excelente emprendimiento donde encontraras las fresas con la mejor calidad y precio en Colombia.",
     technologies: [
-      { name: 'Node JS' },
-      { name: 'Express' },
-      { name: 'MongoDB' },
-      { name: 'Vite' },
-      { name: 'React' },
-      { name: 'TypeScript' },
-      { name: 'Tailwindcss' }
+      { name: "Node JS" },
+      { name: "Express" },
+      { name: "MongoDB" },
+      { name: "Vite" },
+      { name: "React" },
+      { name: "TypeScript" },
+      { name: "Tailwindcss" }
     ],
-    github: 'https://github.com/iAngelManuel/fresquilla-app',
-    demo: 'https://fresquilla.vercel.app',
-    image: '/img/fresquilla-project.png'
+    github: "https://github.com/iAngelManuel/fresquilla-app",
+    demo: "https://fresquilla.vercel.app",
+    image: "/img/fresquilla-project.png"
   }
 ]

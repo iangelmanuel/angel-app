@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import ContactButtons from './ContactButtons'
-import ContactForm from './ContactForm'
-import { ToastContainer } from 'react-toastify';
+import { useState } from "react"
+import ContactButtons from "./ContactButtons"
+import ContactForm from "./ContactForm"
+import { ToastContainer } from "react-toastify"
 
-export default function ContentContact () {
-  const [ isClicked, setIsClicked ] = useState(true)
+export default function ContentContact() {
+  const [isClicked, setIsClicked] = useState(true)
 
   const handleClick = () => {
     setIsClicked(!isClicked)
@@ -13,17 +13,20 @@ export default function ContentContact () {
   return (
     <>
       <article className="flex items-center">
-        <section className="flex px-5 my-5">
+        <section className="my-5 flex px-5">
           <div className="mr-5">
             <img
               src="/img/user.JPG"
               alt="foto de usuario @iangelmanuel"
-              className="w-12 h-12 rounded-full object-cover"
+              className="h-12 w-12 rounded-full object-cover"
             />
           </div>
           <div className="md:flex md:flex-col">
-            <section className="flex flex-col md:flex-row md:gap-1 justify-center md:justify-start md:items-center">
-              <a href="/" className="hover:underline">
+            <section className="flex flex-col justify-center md:flex-row md:items-center md:justify-start md:gap-1">
+              <a
+                href="/"
+                className="hover:underline"
+              >
                 <h5 className="flex gap-x-0.5 font-bold">
                   Angel De La Torre
                   <svg
@@ -31,7 +34,7 @@ export default function ContentContact () {
                     viewBox="0 0 24 24"
                     strokeWidth="1.5"
                     stroke="#00020d"
-                    className="w-6 h-6"
+                    className="h-6 w-6"
                   >
                     <path
                       strokeLinecap="round"
@@ -47,31 +50,35 @@ export default function ContentContact () {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline"
-                >@iangelmanuel</a> · sept 13, 2023
+                >
+                  @iangelmanuel
+                </a>{" "}
+                · sept 13, 2023
               </small>
             </section>
-            <section className="text-sm mt-1 md:mt-0.5 w-[270px] md:w-[500px] lg:w-[450px] text-[14px]">
+            <section className="mt-1 w-[270px] text-sm text-[14px] md:mt-0.5 md:w-[500px] lg:w-[450px]">
               <div className="mt-1">
-                <h6 className="text-sm text-sky-500 font-bold mb-1">¿Deseas contactarte conmigo?</h6>
-                <p>¡Puedes dejarme un comentario para poder comunicarnos lo mas pronto posible!</p>
+                <h6 className="mb-1 text-sm font-bold text-sky-500">
+                  ¿Deseas contactarte conmigo?
+                </h6>
+                <p>
+                  ¡Puedes dejarme un comentario para poder comunicarnos lo mas
+                  pronto posible!
+                </p>
               </div>
             </section>
           </div>
         </section>
       </article>
 
-      <article className="flex justify-evenly items-center my-3 pb-3">
+      <article className="my-3 flex items-center justify-evenly pb-3">
         <ContactButtons
           isClicked={isClicked}
           handleClick={handleClick}
         />
       </article>
 
-      <article className="w-full">
-        {isClicked && (
-          <ContactForm />
-        )}
-      </article>
+      <article className="w-full">{isClicked && <ContactForm />}</article>
       <ToastContainer />
     </>
   )
